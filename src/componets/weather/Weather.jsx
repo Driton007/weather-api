@@ -1,12 +1,17 @@
 import React from "react";
-// import TodayWether from "./TodayWether";
-// import Spinner from "../ui/Spinner";
 
 const Wether = ({ items, isLoading }) => {
+  const current = new Date();
+  const time = `${current.getDate()}/${
+    current.getMonth() + 1
+  }/${current.getFullYear()}`;
+
   return isLoading ? null : (
-    <div className="p-20 m-10 text-white w-max bg-gradient-to-r from-indigo-500 to-violet-900 rounded-3xl">
+    <div className="p-20 m-10 text-white bg-black bg-opacity-50 w-max rounded-3xl">
       <div className="">
-        <p className="my-5 text-4xl font-bold text-center">Today Wether is </p>
+        <p className="my-5 text-4xl font-bold text-center">
+          Today Wether {time}
+        </p>
         <table className="text-center table-auto">
           <thead>
             <tr>
@@ -60,29 +65,3 @@ const Wether = ({ items, isLoading }) => {
 };
 
 export default Wether;
-
-//  <div className="cards">
-//       <div className="md:col-5">
-//         <div className="flex items-center justify-center space-x-10">
-//           <h1 className="my-5 text-2xl font-bold text-center md:text-5xl">
-//             Weather in: {query}
-//           </h1>
-//           <p className="text-4xl font-bold">{time}</p>
-//         </div>
-//         <p className="text-4xl font-bold">Today Temp is:{items.temperature}</p>
-//         <p className="text-4xl font-bold">Wind is:{items.wind}</p>
-//         <p className="text-4xl font-bold">Description:{items.description}</p>
-//         {/* {console.log(items)} */}
-//          <div className="">
-//           {items.forecast.map((items) => {
-//             return <p>{items.wind}</p>;
-//           })}
-//         </div>
-//       </div>
-//     </div>
-
-// <div className="grid grid-cols-4 gap-4">
-//   <div className="">{items.day}</div>
-//   <div className="">{items.temperature}</div>
-//   <div className="">{items.wind}</div>
-// </div>

@@ -23,7 +23,7 @@ const App = () => {
   }, [query]);
 
   return (
-    <div className="min-h-screen pb-20 bg-gradient-to-r from-cyan-500 to-blue-500">
+    <div className="min-h-screen pb-20 background-image">
       <div className="container mx-auto">
         <div className="flex justify-center py-20">
           <div className="col-6">
